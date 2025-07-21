@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supervisão Login</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div id="login-container">
+    <div id="login-container-sub">
+        <div id="logo-container">
+            <img src="lbr.png">
+        </div>
+
+        <form id="login-form">
+            <div class="campo">
+                <input type="user" id="user" placeholder="Usuário" required>
+                <div id="icon-user"><i class="fa-solid fa-user"></i></div>
+            </div>
+            <div class="campo">
+                <input type="password" id="password" placeholder="Senha" required>
+                <div id="icon-password" onclick="passwordView();"><i class="fa-solid fa-eye"></i><i class="fa-solid fa-eye-slash active"></i></div>
+            </div>
+            <button type="submit"><i class="fa-solid fa-right-to-bracket"></i>Entrar</button>
+        </form>
+    </div>
+</div>
+
+
+  <script src="login.js"></script>
+</body>
+</html>
