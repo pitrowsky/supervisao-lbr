@@ -24,12 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('user').value;
         const password = document.getElementById('password').value;
 
-        await fetch('https://backend-lbr.vercel.app/api/users', {
+        const response = await fetch('https://backend-lbr.vercel.app/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ username, password })
         });
+        const data = await response.json();
+        if (data.success) {
+            window.location.href = '/supervisao-lbr/painel/index.html';
+        }
     });
 });
