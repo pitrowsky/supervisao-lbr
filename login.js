@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('user').value;
         const password = document.getElementById('password').value;
 
-        const response = await fetch('https://backend-lbr.vercel.app/users/user.js', {
+        const response = await fetch('https://backend-lbr.vercel.app/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
