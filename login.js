@@ -28,6 +28,6 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username: username, password: password });
+        body: JSON.stringify({ username: username, password: password })
     });
 });
