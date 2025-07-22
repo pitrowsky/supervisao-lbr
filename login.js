@@ -19,15 +19,15 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
     event.preventDefault(); // Impede o envio padrão do formulário
 
     // Captura os valores dos campos de usuário e senha
-    const user = document.getElementById('user').value;
+    const username = document.getElementById('user').value;
     const password = document.getElementById('password').value;
 
     // Envia uma requisição POST para o backend com os dados do login
-    await fetch('https://backend-lbr.vercel.app/login', {
+    await fetch('https://backend-lbr.vercel.app/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username: user, password: password })
+        body: JSON.stringify({ username: username, password: password });
     });
 });
